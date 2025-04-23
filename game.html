@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Clicker Brainrot</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+img {
+    width: 200px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Game Clicker Brainrot | By Naufal</h1>
+        <p>Skor: <span id="score">0</span></p>
+        <img id="game-image" src="thumbnail.jpeg" alt="Gambar">
+        <div>
+            <button id="click-button" onclick="increaseScore()">Klik Untuk Mendapatkan Poin!</button>
+        </div>
+        <audio id="audio1" src="utomp3.com - Tung Tung Tung Sahur Sound Effect  Soundboard Link .mp3"></audio>
+        <audio id="audio2" src="utomp3.com - Tralalero Tralala  Funny MEME Sound Effect.mp3"></audio>
+        <audio id="audio3" src="bombardiro.mp3"></audio>
+    </div>
+    <script>
+        let score = 0;
+
+function increaseScore() {
+    score += 100;
+    document.getElementById("score").textContent = score;
+
+    const image = document.getElementById("game-image");
+    const audio1 = document.getElementById("audio1");
+    const audio2 = document.getElementById("audio2");
+    const audio3 = document.getElementById("audio3");
+
+    if (score === 1000) {
+        image.src = "tung tung.png";
+        audio1.play();
+    } else if (score === 50000) {
+        image.src = "tralaleo tralala.png";
+        audio2.play();
+    } else if (score === 100000) {
+        image.src = "bombardiro corcodilo.jpeg";
+        audio3.play();
+    }
+}
+    </script>
+</body>
+</html>
